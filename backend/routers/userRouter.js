@@ -2,7 +2,8 @@ import express from 'express'
 import data from '../data.js'
 import expressAsyncHandler from 'express-async-handler'
 import User from '../models/userModel.js'
-import bcrypt from 'bcrypt.js'
+import bcrypt from 'bcrypt'
+import { generateToken } from '../utils.js'
 const userRouter = express.Router()
 
 userRouter.get('/seed',
